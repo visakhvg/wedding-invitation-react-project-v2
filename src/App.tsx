@@ -154,22 +154,22 @@ export default function App() {
           <div className="couple-details">
             <article className="person-detail">
               <p className="person-label">The Groom</p>
-              <h3>{invitation.groom.fullName}</h3>
+              <h3>{invitation.groom.name}</h3>
               {/* <p className="person-fullname">{invitation.groom.fullName}</p> */}
               <div className="family-divider"></div>
               <p className="parent-label">Son of</p>
               <p>{invitation.groom.about.replace("S/o ", "")}</p>
-              <p className="person-address">{invitation.groom.address} </p>
+              {/* <p className="person-address">{invitation.groom.address} </p> */}
             </article>
 
             <article className="person-detail">
               <p className="person-label">The Bride</p>
-              <h3>{invitation.bride.fullName}</h3>
+              <h3>{invitation.bride.name}</h3>
               {/* <p className="person-fullname">{invitation.bride.fullName}</p> */}
               <div className="family-divider"></div>
               <p className="parent-label">Daughter of</p>
               <p>{invitation.bride.about.replace("D/o ", "")}</p>
-              <p className="person-address">{invitation.bride.address} </p>
+              {/* <p className="person-address">{invitation.bride.address} </p> */}
             </article>
           </div>
         </section>

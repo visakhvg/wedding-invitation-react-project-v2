@@ -28,28 +28,24 @@ html {
 
 body {
   margin: 0;
-  background-color: #fbf3e9;
+  background-color: #260006;
+  position: relative;
+  isolation: isolate;
+}
 
-  background-image:
-    radial-gradient(
-      ellipse at 15% 15%,
-      rgba(190, 119, 129, 0.12),
-      transparent 35%
-    ),
-    radial-gradient(
-      ellipse at 85% 80%,
-      rgba(184, 149, 88, 0.13),
-      transparent 35%
-    ),
-    repeating-linear-gradient(
-      0deg,
-      rgba(130, 95, 65, 0.018) 0px,
-      rgba(130, 95, 65, 0.018) 1px,
-      transparent 1px,
-      transparent 4px
-    );
+/* Full-page swan background */
+body::before {
+  content: "";
+  position: fixed;
+  inset: 0;
+  z-index: -1;
+  pointer-events: none;
 
-   background-attachment: scroll;
+  background-color: #260006;
+  background-image: url("/assets/swanBg.jpeg");
+  background-size: contain;
+  background-position: center center;
+  background-repeat: no-repeat;
 }
 
 a {
@@ -1425,4 +1421,164 @@ section > .eyebrow,
 .person-detail .person-address {
   margin-top: 15px;
   margin-bottom: 0;
+}
+
+
+/* =========================================
+   SWAN BACKGROUND - ENVELOPE & SECTIONS
+========================================= */
+
+/* Opening envelope background */
+.gate {
+  background: transparent !important;
+}
+
+/* Remove pale backgrounds from soft sections */
+.soft-section {
+  background: transparent !important;
+}
+
+/* Celebrations background */
+#celebrations {
+  background: transparent !important;
+}
+
+/* =========================================
+   IMPROVED TEXT CONTRAST
+========================================= */
+
+/* Main invitation headings */
+.invitation h1,
+.invitation h2,
+.invitation h3 {
+  color: #f5dfc2;
+}
+
+/* General invitation text */
+.invitation p {
+  color: #f0d9c5;
+}
+
+/* Hero text */
+.hero h1 {
+  color: #f5dfc2;
+}
+
+.hero-date,
+.hero-quote {
+  color: #f0d9c5;
+}
+
+/* Celebrations details */
+#celebrations .event-place,
+#celebrations .event-venue,
+#celebrations .event-time,
+#celebrations .event-date,
+#celebrations .event-note,
+#celebrations .celebration-intro,
+#celebrations .celebration-closing {
+  color: #f5dfc2 !important;
+}
+
+/* Celebration decorative borders */
+#celebrations .events-grid,
+#celebrations .event-card + .event-card {
+  border-color: rgba(245, 223, 194, 0.35);
+}
+
+/* Gold accents */
+#celebrations .event-index,
+#celebrations .event-symbol {
+  color: #e4bd78;
+}
+
+
+
+/* =========================================
+   SWAN THEME - TEXT VISIBILITY FIXES
+========================================= */
+
+/* COUPLE / PARENTS DETAILS */
+#couple .person-detail h3 {
+  color: #f8e6cd !important;
+}
+
+#couple .person-detail p,
+#couple .person-detail .parent-label,
+#couple .person-detail .person-fullname,
+#couple .person-detail .person-address {
+  color: #f1d9bd !important;
+}
+
+/* WEDDING CEREMONY & RECEPTION */
+#celebrations .event-card h3 {
+  color: #f8e6cd !important;
+}
+
+#celebrations .event-card p,
+#celebrations .event-place,
+#celebrations .event-venue,
+#celebrations .event-time,
+#celebrations .event-date,
+#celebrations .event-note {
+  color: #f1d9bd !important;
+}
+
+/* GOOGLE MAPS BUTTONS */
+#celebrations .button,
+#celebrations .button-outline {
+  color: #f5dfc2 !important;
+  border-color: #d8b477 !important;
+  background: rgba(65, 0, 12, 0.55);
+}
+
+#celebrations .button:hover {
+  background: #d8b477;
+  color: #35000b !important;
+}
+
+/* FOOTER */
+.footer {
+  background: transparent !important;
+  border-top: 1px solid rgba(245, 223, 194, 0.25);
+}
+
+.footer p,
+.footer .footer-quote,
+.footer .footer-date {
+  color: #f1d9bd !important;
+}
+
+.footer .script-name,
+.footer h2 {
+  color: #f8e6cd !important;
+}
+
+/* BURGUNDY & CHAMPAGNE THEME */
+
+:root {
+  --ivory: #F8E6CD;
+  --champagne: #D8B477;
+  --soft-champagne: #F1D9BD;
+  --deep-burgundy: #260006;
+}
+
+/* Section labels and decorative elements */
+.invitation .eyebrow,
+.invitation .event-index,
+.invitation .person-label,
+.invitation .event-symbol {
+  color: var(--champagne) !important;
+}
+
+/* Section headings */
+.invitation h1,
+.invitation h2,
+.invitation h3 {
+  color: var(--ivory) !important;
+}
+
+/* Secondary text */
+.invitation p {
+  color: var(--soft-champagne);
 }

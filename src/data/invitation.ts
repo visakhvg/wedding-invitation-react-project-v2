@@ -29,7 +29,7 @@ export const invitation = {
     "Join us as we begin our happily ever after.",  
   weddingDateTime: "2026-12-31T10:30:00+05:30",
   weddingDateLabel: "Thursday, 31st December 2026",
-  closingLine: "With love, Visakh & Aiswarya",
+  closingLine: "With love,  Aiswarya & Visakh",
   families: [
     {
       title: "The Groom's family",
@@ -71,6 +71,18 @@ export const invitation = {
     // { src: '/assets/eng9.JPG', caption: 'A special moment' },
   ],
   events: [
+     {
+      name: "Pre Wedding Reception",
+      place: "Al Saj Gravity Hall",
+      address: "Al Saj International Convention Centre, Kazhakootam, Thiruvananthapuram",
+      date: "Wednesday, 30th December 2026",
+      time: "5:30 pm to 8:00 pm",
+      note: "",
+      mapLink: "https://www.google.com/maps/place/Al+Saj+Gravity+hall/@8.5756465,76.8670846,17z/data=!3m1!4b1!4m6!3m5!1s0x3b05bf001fd7dac7:0xbbd4b64ab9c555df!8m2!3d8.5756412!4d76.8696595!16s%2Fg%2F11vx6p4_9c?entry=ttu&g_ep=EgoyMDI2MTExNS4wIKXMDSoASAFQAw%3D%3D",
+      mapEmbedUrl: "",
+    },
+    // { name: 'Groom Side Reception', date:'',time: 'From 5pm to 8:30pm', place: 'Ramya Kalyanamandapam, Pallichal, Thiruvananthapuram', note: 'We look forward to celebrating with you.' },
+  
     // { name: 'Wedding ceremony', date:'Thursday, 31st December 2026',time: 'Muhurtham :  Between 12 pm & 12:23 pm', place: 'RDR Wedding Auditorium, Edapazhinji, Thiruvaananthapuram', note: 'Reception : 11 am' },
     {
       name: "Wedding Ceremony",
@@ -82,18 +94,7 @@ export const invitation = {
       mapLink: "https://www.google.com/maps/place/RDR+Convention+Centre/@8.5036568,76.9660759,17z/data=!3m1!4b1!4m6!3m5!1s0x3b05ba4a6959e6c9:0xcb867b71b24e2b48!8m2!3d8.5036515!4d76.9686508!16s%2Fg%2F1tn4wlr4?entry=ttu&g_ep=EgoyMDI2MTEwMy4wIKXMDSoASAFQAw%3D%3D",
       mapEmbedUrl: "",
     },
-    {
-      name: "Groom Side Reception",
-      place: "Ramya Kalyanamandapam",
-      address: "Pallichal, Thiruvananthapuram",
-      date: "Friday, 1st January 2027",
-      time: "5 pm to 8:30 pm",
-      note: "",
-      mapLink: "https://www.google.com/maps/place/Ramya+Kalyanamandapam/@8.4355268,77.0238181,17z/data=!3m1!4b1!4m6!3m5!1s0x3b05afe43f440bfb:0xb1e35adff1c8ef3c!8m2!3d8.4355215!4d77.026393!16s%2Fg%2F11xbrq6tm?entry=ttu&g_ep=EgoyMDI2MTEwMy4wIKXMDSoASAFQAw%3D%3D",
-      mapEmbedUrl: "",
-    },
-    // { name: 'Groom Side Reception', date:'',time: 'From 5pm to 8:30pm', place: 'Ramya Kalyanamandapam, Pallichal, Thiruvananthapuram', note: 'We look forward to celebrating with you.' },
-  ],
+   ],
   venue: [
     {
       name: "Wedding venue",
