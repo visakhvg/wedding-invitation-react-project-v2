@@ -1,0 +1,441 @@
+
+/* =========================================================
+   1. ENGAGEMENT GALLERY
+   ========================================================= */
+
+.engagement-gallery {
+  max-width: 1100px;
+  margin: 80px auto;
+  padding: 24px;
+  color: #512b35;
+}
+
+.gallery-heading {
+  text-align: center;
+  margin-bottom: 32px;
+}
+
+.gallery-eyebrow {
+  color: #a77b45;
+  text-transform: uppercase;
+  letter-spacing: 0.2em;
+  font-size: 0.75rem;
+}
+
+.gallery-heading h2 {
+  font-family: Georgia, serif;
+  font-size: clamp(2rem, 5vw, 3.5rem);
+  font-weight: 400;
+  margin: 10px 0;
+}
+
+/* Gallery image layout */
+.gallery-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  grid-auto-rows: 230px;
+  gap: 14px;
+}
+
+.gallery-item {
+  position: relative;
+  display: block;
+  padding: 0;
+  border: 0;
+  border-radius: 12px;
+  overflow: hidden;
+  cursor: pointer;
+  background: #f2e7df;
+}
+
+.gallery-item.featured {
+  grid-row: span 2;
+}
+
+.gallery-item img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.5s ease;
+}
+
+.gallery-item:hover img {
+  transform: scale(1.04);
+}
+
+.gallery-caption {
+  position: absolute;
+  inset: auto 0 0;
+  padding: 32px 14px 14px;
+  text-align: left;
+  color: white;
+  background: linear-gradient(transparent, rgb(35 15 20 / 75%));
+  font-family: Georgia, serif;
+}
+
+
+/* =========================================================
+   2. ENGAGEMENT PHOTO LIGHTBOX
+   ========================================================= */
+
+.gallery-lightbox {
+  position: fixed;
+  inset: 0;
+  width: 100%;
+  height: 100vh;
+  height: 100dvh;
+  z-index: 999999;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  box-sizing: border-box;
+  padding: 60px 65px 25px;
+
+  background: rgba(20, 12, 15, 0.95);
+  overflow: hidden;
+}
+
+.gallery-lightbox figure {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  max-width: 100%;
+  max-height: 100%;
+  margin: 0;
+
+  text-align: center;
+  color: white;
+}
+
+.gallery-lightbox figure img {
+  display: block;
+  max-width: 100%;
+  max-height: calc(100dvh - 150px);
+  width: auto;
+  height: auto;
+  object-fit: contain;
+  margin: auto;
+}
+
+.gallery-lightbox figcaption {
+  margin-top: 12px;
+}
+
+.lightbox-count {
+  font-size: 0.8rem;
+  opacity: 0.7;
+  margin-top: 8px;
+}
+
+/* Lightbox close button */
+.lightbox-close {
+  position: absolute;
+  top: 18px;
+  right: 20px;
+  z-index: 100001;
+
+  width: 44px;
+  height: 44px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  border: 1px solid rgba(255, 255, 255, 0.35);
+  border-radius: 50%;
+
+  color: white;
+  background: rgba(255, 255, 255, 0.12);
+
+  font-size: 28px;
+  cursor: pointer;
+  transition: background 0.2s ease;
+}
+
+.lightbox-close:hover {
+  background: rgba(255, 255, 255, 0.3);
+}
+
+/* Lightbox previous and next buttons */
+.lightbox-arrow {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  z-index: 100001;
+
+  width: 46px;
+  height: 46px;
+
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  border-radius: 50%;
+
+  color: white;
+  background: rgba(255, 255, 255, 0.12);
+
+  font-size: 32px;
+  cursor: pointer;
+}
+
+.lightbox-arrow.left {
+  left: 18px;
+}
+
+.lightbox-arrow.right {
+  right: 18px;
+}
+
+
+/* =========================================================
+   3. OUR STORY - IMAGE STYLING
+   ========================================================= */
+
+.story-card img {
+  display: block;
+  width: 100%;
+  height: 250px;
+  object-fit: contain;
+  object-position: center;
+
+  /* Champagne-gold decorative background */
+  background-color: #493f35;
+  background-image:
+    radial-gradient(
+      circle at 20% 25%,
+      rgba(167, 123, 69, 0.18) 1px,
+      transparent 2px
+    ),
+    radial-gradient(
+      circle at 80% 75%,
+      rgba(167, 123, 69, 0.18) 1px,
+      transparent 2px
+    ),
+    repeating-linear-gradient(
+      45deg,
+      transparent,
+      transparent 18px,
+      rgba(167, 123, 69, 0.045) 19px,
+      transparent 20px
+    );
+
+  transition: transform 0.5s ease;
+}
+
+
+/* =========================================================
+   4. HEADER / NAVIGATION
+   ========================================================= */
+
+/* Sticky header on desktop and mobile */
+.topbar {
+  position: sticky;
+  top: 0;
+  z-index: 10000;
+  box-sizing: border-box;
+  width: 100%;
+}
+
+
+/* =========================================================
+   5. FULL-PAGE SECTION TRANSITIONS
+   ========================================================= */
+
+/* Smooth movement for navigation links */
+html {
+  scroll-behavior: smooth;
+}
+
+
+
+/* =========================================================
+   6. TABLET AND MOBILE RESPONSIVE STYLES
+   ========================================================= */
+
+@media (max-width: 760px) {
+
+  /* Mobile header layout */
+  .topbar {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    padding: 12px 14px;
+    min-height: auto;
+  }
+
+  .brand {
+    font-size: 1.7rem;
+    text-align: center;
+  }
+
+  .topbar nav {
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    gap: 9px 18px;
+  }
+
+  .topbar nav a {
+    font-size: 0.95rem;
+    white-space: nowrap;
+  }
+
+  .music-toggle {
+    padding: 6px 12px;
+    font-size: 12px;
+  }
+
+  /* Keep touch scrolling natural on mobile */
+  .invitation {
+    scroll-snap-type: y proximity;
+  }
+}
+
+
+@media (max-width: 650px) {
+
+  /* Mobile engagement gallery */
+  .engagement-gallery {
+    padding: 16px;
+    margin: 48px auto;
+  }
+
+  .engagement-gallery .gallery-grid {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    grid-template-rows: 260px 180px 180px;
+    grid-auto-flow: row;
+    grid-auto-rows: unset;
+    gap: 12px;
+  }
+
+  .engagement-gallery .gallery-item {
+    position: relative;
+    display: block;
+    width: 100%;
+    height: 100%;
+    min-height: 0;
+    grid-column: auto;
+    grid-row: auto;
+    padding: 0;
+    overflow: hidden;
+  }
+
+  .engagement-gallery .gallery-item.featured {
+    grid-column: 1 / -1;
+    grid-row: 1;
+    height: 100%;
+  }
+
+  .engagement-gallery .gallery-item img {
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+
+  /* Mobile lightbox */
+  .gallery-lightbox {
+    padding: 65px 12px 25px;
+  }
+
+  .gallery-lightbox figure img {
+    max-width: 100%;
+    max-height: calc(100dvh - 160px);
+  }
+
+  .lightbox-close {
+    top: 12px;
+    right: 12px;
+  }
+
+  .lightbox-arrow {
+    width: 36px;
+    height: 36px;
+    font-size: 26px;
+  }
+
+  .lightbox-arrow.left {
+    left: 5px;
+  }
+
+  .lightbox-arrow.right {
+    right: 5px;
+  }
+}
+
+
+/* =========================================================
+   7. ACCESSIBILITY
+   ========================================================= */
+
+/* Respect visitors who prefer reduced motion */
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+
+  .gallery-item img {
+    transition: none;
+  }
+}
+
+/* =========================================================
+   8. REVEAL ANIMATION
+   ========================================================= */
+
+
+/* =========================================
+   PAGE-BY-PAGE SMOOTH SCROLLING
+========================================= */
+
+/* The browser page is the actual scroll container */
+html {
+  scroll-behavior: smooth;
+}
+
+
+
+/* =========================================
+   DOWN ARROW BUTTON
+========================================= */
+
+.section-scroll-button {
+  position: fixed;
+  right: 25px;
+  bottom: 25px;
+  z-index: 10001;
+
+  width: 48px;
+  height: 48px;
+  border-radius: 50%;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  border: 1px solid #a77b45;
+  background: #fff9f1;
+  color: #6f2738;
+
+  font-size: 26px;
+  cursor: pointer;
+
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.12);
+}
+
+
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+    scroll-snap-type: none;
+  }
+}
+
